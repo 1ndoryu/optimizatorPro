@@ -153,3 +153,7 @@
         min-height: 300px;
     }
 }
+
+.caseStudyDescription p {
+    font-size: 13px;
+}
