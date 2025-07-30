@@ -1,3 +1,253 @@
+/* SERVICIOS */
+
+.serviceW svg {
+    height: 50px;
+    width: 50px;
+}
+
+.serviceBlockW .fusion-column-wrapper {
+    -webkit-backdrop-filter: blur(20px) !important;
+    backdrop-filter: blur(20px) !important;
+    background-color: #fbfbfb4d !important;
+    min-height: 340px !important;
+}
+
+@media (width < 1025px) {
+    .serviceBlockW .fusion-column-wrapper {
+        min-height: unset !important;
+    }
+}
+
+
+/* PORTAFOLIO */
+
+/*
+* Estilos para la plantilla del Portfolio
+* ----------------------------------------
+*/
+.portfolioCaseStudy {
+    display: flex;
+    gap: 4rem;
+    padding: 3rem 0;
+    align-items: stretch; /* Corregido: para que las columnas tengan la misma altura */
+}
+
+.caseStudyContent {
+    flex: 1;
+    min-width: 50%;
+}
+
+.caseStudyDescription {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+.caseStudyImage {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Regla eliminada/modificada para la imagen */
+.caseStudyImage img {
+    display: none; /* Ocultamos la etiqueta img por si algún plugin la añade */
+}
+
+/* NUEVA REGLA: para el div que contiene la imagen de fondo */
+.caseStudyImage .image-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px; /* Opcional: para redondear las esquinas */
+}
+
+
+.caseStudyImage .imagePlaceholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #111;
+}
+
+/* -- Estilos de las métricas -- */
+.caseStudyMetrics {
+    width: 100%;
+}
+
+.metricsHeader,
+.metricRow {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.metricsHeader {
+    border-bottom: 1px solid #000;
+    font-size: 0.7rem;
+    color: #888;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.metricLabel {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.metricValue {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    line-height: 1;
+}
+
+.metricValue.before {
+    color: #888;
+}
+
+.metricValue.after {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.metricValue svg {
+    width: 22px;
+    height: 22px;
+    color: #28a745; /* Verde */
+}
+
+/* -- Responsividad básica -- */
+@media (max-width: 768px) {
+    .portfolioCaseStudy {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}
+
+.impar.portfolioCaseStudy {
+    flex-direction: row-reverse;
+}
+
+/* -- Paginación -- */
+.gloryPaginacion {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gloryPaginacion .page-numbers {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.gloryPaginacion .page-numbers:hover {
+    background-color: #f0f0f0;
+}
+
+.gloryPaginacion .current {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+@media (width < 1025px) {
+    .portfolioCaseStudy {
+        flex-direction: column-reverse !important;
+    }
+    .caseStudyImage .image-background {
+        min-height: 400px;
+    }
+}
+
+@media (width < 641px) {
+
+    .caseStudyImage .image-background {
+        min-height: 300px;
+    }
+}
+
+.caseStudyDescription p {
+    font-size: 13px;
+}
+
+/* HOME */
+
+.background-aurora {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.blob {
+    position: absolute !important;
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 50% !important;
+    filter: blur(70px) !important;
+    
+    opacity: 0;
+}
+
+
+.contenido {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.color-naranja {
+    background: #ff5733 !important;
+    top: 20% !important;
+    left: 60% !important;
+    z-index: 1 !important;
+}
+
+.color-rojo {
+    background: #c70039 !important;
+    top: 25% !important;
+    left: 50% !important;
+    z-index: 1 !important;
+}
+
+.getInTouch {
+    position: relative;
+}
+
+.freeSeo {
+    position: absolute;
+    top: 120px;
+    right: 200px;
+}
+
+/* Estilo para el cursor de la animación de máquina de escribir */
+.palabras-animadas-cursor {
+    border-right: 2px solid; /* Simula el cursor */
+    padding-right: 2px;
+    animation: parpadeo-cursor 0.7s infinite;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo-cursor {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: inherit; /* Hereda el color del texto */
+    }
+}
+
+
+/* HEADER */
+
 /* --- VARIABLES Y ESTILOS BASE --- */
 :root {
     --color-black: #000;
@@ -322,4 +572,81 @@ body.menu-open {
         opacity: 1 !important;
         visibility: visible !important;
     }
+}
+
+/* FORM */ 
+
+textarea {
+    color: #fff;
+    border: none;
+    padding: 0px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    background: none;
+    resize: none;
+    width: 100%;
+}
+
+label {
+    font-size: 12px;
+    color: #a2a2a2;
+}
+
+input,
+textarea {
+    background: unset;
+    padding: 7px 0px !important;
+    border: none !important;
+    border-bottom: var(--borde) !important;
+    font-size: 12px;
+    color: #d4d4d4;
+    border-radius: 0px;
+    
+    resize: none;
+    line-height: 1.5;
+    width: 100%;
+    margin: 4px 0;
+}
+
+input:focus,
+textarea:focus,
+input:hover,
+textarea:hover {
+    outline: none !important;
+    border: unset !important;
+    border-bottom: var(--borde) !important;
+}
+
+select {
+    border: unset;
+    background: unset;
+    font-family: 'Source Sans 3';
+    padding: 5px;
+    padding-left: 0px;
+    margin: unset;
+    font-size: 14px;
+    border-bottom: var(--borde);
+    outline: none !important;
+}
+
+
+.notificacionPersonalizada {
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--tercero) !important;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 12px;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: notification-slide-in 0.3s ease-out forwards;
+    color: #000 !important;
+}
+
+.formW input, .formW textarea {
+    background: unset !important;
+    border: unset;
+    border-radius: unset !important;
 }
