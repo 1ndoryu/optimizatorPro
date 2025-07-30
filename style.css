@@ -1,0 +1,70 @@
+/*
+Theme Name: Avada
+Description: The Avada Website Builder is the ultimate design and creation suite. Design Anything, Build Everything, Fast. The #1 selling product of all time on ThemeForest.
+Theme URI: https://avada.com/
+Author: ThemeFusion
+Author URI: https://themeforest.net/user/ThemeFusion
+License: Themeforest Split Licence
+Version: 7.12.2
+Requires PHP: 5.6
+Requires at least: 4.9
+Text Domain: Avada
+*/
+
+/* Classes needed by Theme Check */
+.wp-caption-text,
+.gallery-caption,
+.bypostauthor {
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    font-size: 10px;
+    font-weight: 350;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    text-wrap: pretty;
+}
+
+:root {
+    --fondo: #070707;
+    --awb-active-color: #ec4c4c !important;
+    --borde: 1px #161616 solid;
+    --radius: 5px;
+    --bordeBoton: 1px #1f1f1f8c solid;
+    --padding: 20px;
+    --ancho: 600px;
+    --blanco: #f5f1e7;
+    --negro: #070707;
+    --font: 'Source Sans 3', Arial, Helvetica, sans-serif !important;
+    --font-serif: 'Source Serif 4', Arial, Helvetica, sans-serif !important;
+    --primero: #1a7b8b;
+    --segundo: #2a4a3c;
+    --tercero: #ebe2d3;
+    --cuarto: #5B4E3D;
+}
+
+li.fusion-custom-menu-item.fusion-main-menu-search.fusion-search-overlay {
+    display: none;
+}
+
+.portafolioW div {
+    display: flex;
+    gap: 20px;
+}
+
+.portafolioTextW {
+    width: auto !important;
+    gap: 0px;
+}
+.portafolioTextW div {
+    width: auto !important;
+    gap: 0px;
+}
+

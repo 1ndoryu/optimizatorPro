@@ -1,0 +1,43 @@
+/* Estilos para el Meta Box del Portafolio */
+.app-metabox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+.app-metabox-row,
+.app-metabox-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 80px; /* Label, Before, After, Actions */
+    gap: 15px;
+    align-items: center;
+}
+
+.app-metabox-header {
+    font-weight: bold;
+    border-bottom: 1px solid #ccd0d4;
+    padding-bottom: 8px;
+    color: #2271b1;
+}
+
+.app-metabox-row-empty {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    border: 1px dashed #ccd0d4;
+    border-radius: 4px;
+}
+
+.app-metabox-input {
+    width: 100%;
+}
+
+.glory-metabox-actions {
+    padding-top: 10px;
+    border-top: 1px solid #ccd0d4;
+}
+
+.glory-remove-metric-btn {
+    justify-self: center;
+}

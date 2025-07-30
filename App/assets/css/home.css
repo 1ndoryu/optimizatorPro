@@ -1,0 +1,62 @@
+
+.background-aurora {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.blob {
+    position: absolute !important;
+    width: 250px !important;
+    height: 250px !important;
+    border-radius: 50% !important;
+    filter: blur(70px) !important;
+    
+    opacity: 0;
+}
+
+
+.contenido {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.color-naranja {
+    background: #ff5733 !important;
+    top: 20% !important;
+    left: 60% !important;
+    z-index: 1 !important;
+}
+
+.color-rojo {
+    background: #c70039 !important;
+    top: 25% !important;
+    left: 50% !important;
+    z-index: 1 !important;
+}
+
+.getInTouch {
+    position: relative;
+}
+
+.freeSeo {
+    position: absolute;
+    top: 120px;
+    right: 200px;
+}
+
+/* Estilo para el cursor de la animación de máquina de escribir */
+.palabras-animadas-cursor {
+    border-right: 2px solid; /* Simula el cursor */
+    padding-right: 2px;
+    animation: parpadeo-cursor 0.7s infinite;
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo-cursor {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: inherit; /* Hereda el color del texto */
+    }
+}
