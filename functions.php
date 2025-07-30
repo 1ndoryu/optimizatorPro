@@ -196,7 +196,6 @@ function incluirArchivos($directorio)
 
 $directorios = [
     'App/',
-    'Glory/',
 
 ];
 
