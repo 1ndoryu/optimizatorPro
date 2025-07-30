@@ -8,7 +8,7 @@ function animarPalabras(config) {
     if (config && config.idElemento) {
         window.__animarPalabrasConfigs.set(config.idElemento, config);
     }
-    const {idElemento, palabras, tiempoEspera} = config || {};
+    const { idElemento, palabras, tiempoEspera, retardoInicial = 0 } = config || {};
     const elemento = document.querySelector(idElemento);
 
     if (!elemento) {
@@ -54,8 +54,8 @@ function animarPalabras(config) {
         }
     }
 
-    // Iniciar la animación
-    cicloDeAnimacion();
+    // Iniciar la animación con retardo opcional
+    setTimeout(cicloDeAnimacion, retardoInicial);
 }
 
 // Eliminamos el listener directo y lo reemplazamos por uno que re-ejecute con config almacenada
