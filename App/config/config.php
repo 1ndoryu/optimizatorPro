@@ -3,7 +3,7 @@
 use Glory\Core\AssetManager;
 
 AssetManager::setGlobalDevMode(false);
-AssetManager::setThemeVersion('0.1.1');
+AssetManager::setThemeVersion('0.1.2');
 AssetManager::defineFolder('script', '/App/assets/js/');
 AssetManager::defineFolder('style', '/App/assets/css/');
 
