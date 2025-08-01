@@ -6,8 +6,8 @@ use Glory\Handler\FormHandler;
 
 FormHandler::registerHandlerNamespace('App\\Code\\');
 
-AssetManager::setGlobalDevMode(true);
-AssetManager::setThemeVersion('0.1.4');
+AssetManager::setGlobalDevMode(false);
+AssetManager::setThemeVersion('0.1.5');
 AssetManager::defineFolder('script', '/App/assets/js/');
 AssetManager::defineFolder('style', '/App/assets/css/');
 
