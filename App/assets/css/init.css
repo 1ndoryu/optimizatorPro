@@ -358,6 +358,13 @@
     transform: rotate(-45deg);
 }
 
+.header-logo-text-mode .siteMenuLogo {
+    width: auto;
+    border-radius: 1rem;
+    font-size: 14px;
+    FONT-WEIGHT: 600;
+}
+
 /* --- ESTILOS ADICIONALES PARA MENÚ MÓVIL --- */
 
 .siteMenuNav {
