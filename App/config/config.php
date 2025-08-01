@@ -3,30 +3,16 @@
 use Glory\Core\AssetManager;
 use Glory\Manager\OpcionManager;
 use Glory\Handler\FormHandler;
+use Glory\Admin\SyncManager;
 
 FormHandler::registerHandlerNamespace('App\\Code\\');
 
 AssetManager::setGlobalDevMode(false);
-AssetManager::setThemeVersion('0.1.5');
+AssetManager::setThemeVersion('0.1.6');
 AssetManager::defineFolder('script', '/App/assets/js/');
 AssetManager::defineFolder('style', '/App/assets/css/');
-
-AssetManager::define(
-    'style',
-    'app-admin-styles',
-    '/App/assets/css/admin.css',
-    ['area' => 'admin']
-);
-
-AssetManager::define(
-    'script',
-    'home-blur-editor',
-    '/App/assets/js/HomeBlurEditor.js',
-    [
-        'deps'      => ['home'],
-        'in_footer' => true,
-    ]
-);
+SyncManager::setAdminBarVisible(true);
+SyncManager::setResetButtonVisible(false);
 
 add_action('wp_enqueue_scripts', function() {
     if (is_front_page()) {
