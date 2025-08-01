@@ -1,8 +1,37 @@
 function HomeW() {
     const blobs = document.querySelectorAll('.blob');
-    
-    // --- PARÁMETROS DE LA ANIMACIÓN ---
-    const finalOpacity = 0.5;
+
+    const settings = window.homeBlurSettings || {};
+
+    // --- PARÁMETROS DINÁMICOS DE LA ANIMACIÓN ---
+    const finalOpacity = parseFloat(settings.opacity ?? 0.5);
+    const blurAmount   = parseInt(settings.blur ?? 70, 10);
+    const enabled      = (settings.enabled ?? '1') === '1';
+    const posValues    = {
+        c1_top:  settings.c1_top  ?? 20,
+        c1_left: settings.c1_left ?? 60,
+        c2_top:  settings.c2_top  ?? 25,
+        c2_left: settings.c2_left ?? 50,
+    };
+
+    // Si el efecto está desactivado ocultamos los blobs y salimos.
+    if (!enabled) {
+        blobs.forEach(b => b.style.display = 'none');
+        return;
+    }
+
+    // Aplicar estilos iniciales según configuración
+    blobs.forEach((blob, idx) => {
+        blob.style.setProperty('filter', `blur(${blurAmount}px)`, 'important');
+        if (idx === 0) {
+            blob.style.setProperty('top',  `${posValues.c1_top}%`,  'important');
+            blob.style.setProperty('left', `${posValues.c1_left}%`, 'important');
+        } else {
+            blob.style.setProperty('top',  `${posValues.c2_top}%`,  'important');
+            blob.style.setProperty('left', `${posValues.c2_left}%`, 'important');
+        }
+    });
+
     const animationDuration = 2000; // 2 segundos, en milisegundos
     const fadeSpeed = 10;
     let scrollListenerActive = true;
@@ -50,41 +79,6 @@ function HomeW() {
     }
 }
 
-
+document.addEventListener('DOMContentLoaded', HomeW);
 document.addEventListener('gloryRecarga', HomeW);
 
-jQuery(function($) {
-    // Escuchamos el evento personalizado 'gloryRecarga' en el objeto window.
-    // Este evento parece ser el que se dispara después de tu recarga AJAX.
-    $(window).on('gloryRecarga', function() {
-
-        console.log('Recarga AJAX detectada (gloryRecarga). Re-inicializando el formulario de Fusion.');
-
-        // Usamos un pequeño retardo (setTimeout) para asegurarnos de que el nuevo
-        // contenido del formulario ya esté completamente cargado en el DOM antes de intentar
-        // adjuntar los eventos. 100 milisegundos es suficiente.
-        setTimeout(function() {
-
-            // Verificamos que el objeto y las funciones existan para evitar errores
-            if (typeof window.fusionForms !== 'undefined' && typeof window.fusionForms.onReady === 'function') {
-
-                // Volvemos a ejecutar las funciones de inicialización del formulario.
-                // Esto adjuntará de nuevo los manejadores de eventos 'submit' y 'click'
-                // al nuevo formulario que se cargó por AJAX.
-                window.fusionForms.onLoad();
-                window.fusionForms.onReady();
-
-                // También re-inicializamos la lógica condicional del formulario si existe.
-                if (typeof window.fusionForms.formLogics === 'function') {
-                    window.fusionForms.formLogics();
-                }
-
-                 // También re-inicializamos los selectores personalizados si existen.
-                 if (typeof addAvadaSelectStyles === 'function') {
-                    addAvadaSelectStyles();
-                 }
-            }
-
-        }, 100);
-    });
-});

@@ -41,3 +41,92 @@
 .glory-remove-metric-btn {
     justify-self: center;
 }
+
+/* Estilos para el efecto blur */
+
+/* Estilos para el Editor de Blur en el Frontend */
+#glory-blur-editor-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.glory-editor-button {
+    background-color: #007cba;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.glory-editor-button.save {
+    background-color: #4CAF50;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.glory-editor-panel {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 10px;
+}
+
+.glory-editor-panel.hidden {
+    display: none;
+}
+
+.glory-editor-panel h4 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.glory-editor-field {
+    margin-bottom: 15px;
+}
+
+.glory-editor-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+    font-size: 13px;
+}
+
+.glory-editor-field input[type="range"] {
+    width: 100%;
+    margin: 0;
+}
+
+.glory-editor-field input[type="checkbox"] {
+    margin-right: 5px;
+}
+.glory-editor-notice {
+    font-size: 13px;
+    color: #007cba;
+    margin-top: 10px;
+    text-align: center;
+    min-height: 1.2em;
+}
+
+.button-container button {
+    margin: 0 !important;
+    font-size: 12px !important;
+}
+.button-container {
+    display: flex
+;
+    align-items: center;
+    gap: 10px;
+}

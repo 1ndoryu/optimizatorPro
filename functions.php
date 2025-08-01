@@ -171,8 +171,8 @@ if (file_exists($glory_loader)) {
 require_once __DIR__ . '/vendor/autoload.php';
 
 try {
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
+    #$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    #$dotenv->load();
 } catch (Exception $e) {
     error_log('Error al cargar el archivo .env: ' . $e->getMessage());
 }
